@@ -1,0 +1,22 @@
+<div class="container" *ngFor="let item of itensMenu; index as i">
+  <div class="row" *ngIf="i % 2 == 0">
+    <div class="col-6 card-menu">
+      <a [routerLink]="['/', itensMenu[i].icone]">
+        <app-cards-menu
+          [iconName]="itensMenu[i].icone"
+          [menuEntry]="itensMenu[i].titulo"
+        >
+        </app-cards-menu>
+      </a>
+    </div>
+    <div class="col-6" *ngIf="itensMenu.length > i + 1">
+      <a [routerLink]="['/', itensMenu[i + 1].icone]">
+        <app-cards-menu
+          [iconName]="itensMenu[i + 1].icone"
+          [menuEntry]="itensMenu[i + 1].titulo"
+        >
+        </app-cards-menu>
+      </a>
+    </div>
+  </div>
+</div>
