@@ -1,3 +1,4 @@
+import { ControladorEventosService } from './../../shared/services/controlador-eventos.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItensHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private data: ControladorEventosService) { }
 
   ngOnInit(): void {
   }
 
+  onClick(){
+    this.data.executar(false);
+  }
 }

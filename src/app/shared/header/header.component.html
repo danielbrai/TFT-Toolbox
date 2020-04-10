@@ -1,5 +1,16 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
+    <mat-icon *ngIf="estaNaTelaPrincipal" [svgIcon]="'back'"></mat-icon>
     <span>TFT Toolbox</span>
+    <span class="example-spacer"></span>
+    <mat-button mat-icon-button [matMenuTriggerFor]="menu" *ngIf="estaNaTelaPrincipal" >
+      <mat-icon>more_vert</mat-icon>
+    </mat-button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item *ngFor="let item of itensMenu" >
+        <mat-icon [svgIcon]="item.icone"></mat-icon>
+        <span>{{item.titulo}}</span>
+      </button>
+    </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>

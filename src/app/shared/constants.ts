@@ -19,6 +19,11 @@ export const CONSTANTS = {
     statistics: {
       name: 'statistics',
       path: 'assets/img/statistics.svg'
+    },
+    back: {
+      name: 'back',
+      path: 'assets/img/back.svg'
     }
-  }
+  },
+
 };
