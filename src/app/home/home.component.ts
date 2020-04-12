@@ -1,3 +1,4 @@
+import { ITENS_MENU } from './../../config/itens-menu';
 import { Component, OnInit, EventEmitter } from '@angular/core';
 
 @Component({
@@ -13,6 +14,8 @@ export class HomeComponent implements OnInit {
 
   estaNaTelaPrincipal = true;
   eventEmitter = new EventEmitter<boolean>();
+
+  itensMenu = ITENS_MENU;
 
   ngOnInit(): void {
   }

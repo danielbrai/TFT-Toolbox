@@ -7,23 +7,20 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MenuComponent } from './home/menu/menu.component';
 import { ItensModule } from './itens/itens.module';
-
 import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    MenuComponent],
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     NgbModule,
     SharedModule,
-    ItensModule,
-    RouterModule.forRoot([
+    ItensModule, RouterModule.forRoot([
       { path: 'itens', component: ItensHomeComponent }
     ])
   ],

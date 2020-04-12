@@ -1,6 +1,5 @@
-import { ControladorEventosService } from './../../shared/services/controlador-eventos.service';
-import { ITENS_MENU } from './../../../config/itens-menu';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { ControladorEventosService } from '../../services/controlador-eventos.service';
 
 @Component({
   selector: 'app-menu',
@@ -8,7 +7,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  itensMenu = ITENS_MENU;
+
+  @Input()
+  itensMenu;
 
   navegou = false;
 
@@ -21,6 +22,4 @@ export class MenuComponent implements OnInit {
   onClicou(){
     this.data.executar(true);
   }
-
-
 }
